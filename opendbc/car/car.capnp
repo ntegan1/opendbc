@@ -373,6 +373,10 @@ struct CarControl {
       stopping @2;
       starting @3;
     }
+    upAccelCmd @9 :Float32;
+    uiAccelCmd @10 :Float32;
+    udAccelCmd @11 :Float32;
+    ufAccelCmd @12 :Float32;
   }
 
   struct CruiseControl {

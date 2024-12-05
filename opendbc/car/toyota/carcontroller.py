@@ -285,6 +285,10 @@ class CarController(CarControllerBase):
     new_actuators.steerOutputCan = apply_steer
     new_actuators.steeringAngleDeg = float(self.last_angle)
     new_actuators.accel = self.accel
+    new_actuators.upAccelCmd = self.long_pid.p
+    new_actuators.uiAccelCmd = self.long_pid.i
+    new_actuators.udAccelCmd = self.long_pid.d
+    new_actuators.ufAccelCmd = self.long_pid.f
 
     self.frame += 1
     return new_actuators, can_sends
